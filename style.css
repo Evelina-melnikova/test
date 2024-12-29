@@ -1,0 +1,27 @@
+
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Winston', sans-serif;
+}
+
+.header {
+    display: flex;
+    background: black;
+    background-image: url(./images/noise.png);
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-repeat: no-repeat; 
+}
+
+.header-title {
+    font-family: 'Winston Regular', sans-serif;
+    font-size: 22.15px;
+    font-weight: 600;
+    line-height: 24.36px;
+    text-align: left;
+    text-decoration-skip-ink: none;
+    color: #FFFFFF;
+}
