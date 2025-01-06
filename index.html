@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="./vendor/winston-cufonfonts-webfont/style.css">
+
     <title>Test</title>
 </head>
 
@@ -19,72 +22,77 @@
             <button type="button" class="header-icon__wrapper_button number"></button>
             <button type="button" class="header-icon__wrapper_button basket"></button>
             <button type="button" class="header-button__menu"></button>
+
         </div>
 
     </header>
     <main class="content">
-        <section class="services">
-            <div class="services-container services-container__text">
-                <p class="services-text">Онлайн оформление</p>
-                <p class="services-text">Доставка по РФ</p>
-                <p class="services-text">От 1 шт.</p>
-            </div>
-            <h2 class="services-title">Наносим логотипы компаний на одежду и аксессуары</h2>
-            <div class="services-container services-container__buttons">
-                <button type="button" class="services-button services-button__text">
-                    Наши услуги
-                </button>
-                <button type="button" class="services-button services-button__play">
-                    <img src="./images/Frame 19 (1).svg" alt="play" class="button-img">
-                </button>
-            </div>
-            <p class="services-subtitle">Разработаем принт и нанесём на любую одежду или иную атрибутику вашего бренда
-                от 1 шт. и 3-х дней в Санкт-Петербурге</p>
-        </section>
-        <section class="about">
-            <div class="about-container__numbers">
-                <a href="./" class="about-link">
-                    <p class="about-number about-one">01</p>
-                </a>
-                <a href="./" class="about-link">
-                    <p class="about-number">02</p>
-                </a>
-                <a href="./" class="about-link">
-                    <p class="about-number">03</p>
-                </a>
-                <a href="./" class="about-link">
-                    <p class="about-number">04</p>
-                </a>
-            </div>
-            <div class="about-container__line">
-                <hr class="number-line grin">
-                <hr class="number-line white">
-                <hr class="number-line gradient">
-            </div>
-            <div class="about-container__photo">
-                <img src="./images/image-Photoroom (15) 1.svg" alt="" class="about-photo">
-                <img src="./images/Summertime.svg" alt="" class="about-photo__icon icon violet-icon">
-                <img src="./images/Summertime green.svg" alt="" class="about-photo__icon green-icon">
-            </div>
-            <div class="about-wrapper__cards">
-                <div class="about-container__cards">
-                    <h3 class="about-container__cards-title">Напечатали принтов и логотипов за всё время работы</h3>
-                    <div class="card-wrapper">
-                        <img src="./images/Summertime cards.svg" alt="" class="card-wrapper__img">
-                        <p class="card-wrapper__text">296 390+</p>
-                    </div>
-                </div>
-                <div class="about-container__cards cards-two">
-                    <h3 class="about-container__cards-title">Производственная мощность предприятия в Санкт-Петербурге
-                    </h3>
-                    <div class="card-wrapper">
-                        <img src="./images/Summertime cards.svg" alt="" class="card-wrapper__img">
-                        <p class="card-wrapper__text">1 000+</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <div class="noise-background">
 
+            <section class="services">
+                <div class="services-container services-container__text">
+                    <p class="services-text">Онлайн оформление</p>
+                    <p class="services-text">Доставка по РФ</p>
+                    <p class="services-text">От 1 шт.</p>
+                </div>
+                <h2 class="services-title">Наносим логотипы компаний на одежду и аксессуары</h2>
+                <div class="services-container services-container__buttons">
+                    <button type="button" class="services-button services-button__text">
+                        Наши услуги
+                    </button>
+                    <button type="button" class="services-button services-button__play">
+                        <img src="./images/Frame 19 (1).svg" alt="play" class="button-img">
+                    </button>
+                </div>
+                <p class="services-subtitle">Разработаем принт и нанесём на любую одежду или иную атрибутику вашего
+                    бренда
+                    от 1 шт. и 3-х дней в Санкт-Петербурге</p>
+            </section>
+            <section class="about">
+                <div class="about-container__numbers">
+                    <a href="./" class="about-link">
+                        <p class="about-number about-one">01</p>
+                    </a>
+                    <a href="./" class="about-link">
+                        <p class="about-number">02</p>
+                    </a>
+                    <a href="./" class="about-link">
+                        <p class="about-number">03</p>
+                    </a>
+                    <a href="./" class="about-link">
+                        <p class="about-number">04</p>
+                    </a>
+                </div>
+                <div class="about-container__line">
+                    <hr class="number-line grin">
+                    <hr class="number-line white">
+                    <hr class="number-line gradient">
+                </div>
+                <div class="about-container__photo">
+                    <img src="./images/man.svg" alt="" class="about-photo">
+                    <img src="./images/Summertime.svg" alt="" class="about-photo__icon icon violet-icon">
+                    <img src="./images/Summertime green.svg" alt="" class="about-photo__icon green-icon">
+                </div>
+                <div class="about-wrapper__cards">
+                    <div class="about-container__cards">
+                        <h3 class="about-container__cards-title">Напечатали принтов и логотипов за всё время работы</h3>
+                        <div class="card-wrapper">
+                            <img src="./images/Summertime cards.svg" alt="" class="card-wrapper__img">
+                            <p class="card-wrapper__text">296 390+</p>
+                        </div>
+                    </div>
+                    <div class="about-container__cards cards-two">
+                        <h3 class="about-container__cards-title">Производственная мощность предприятия
+                            в Санкт-Петербурге
+                        </h3>
+                        <div class="card-wrapper">
+                            <img src="./images/Summertime cards.svg" alt="" class="card-wrapper__img">
+                            <p class="card-wrapper__text">1 000+</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
         <section class="production">
             <h3 class="production-title">Мы наносим</h3>
             <div class="production-cards card-one">
@@ -92,7 +100,7 @@
                     <h4 class="production-card__title">Термопечать</h4>
                     <p class="production-subtitle">Процесс нанесения изображения на ткань с помощью нагревания
                         специальной термобумаги</p>
-                    <a href="./" class="production-button">Подробнее <img src="./images/Vector (Stroke).svg"
+                    <a href="./" class="production-button"> Подробнее <img src="./images/Vector (Stroke).svg"
                             alt="стрелочка" class="link-img"></a>
                 </div>
                 <img src="./images/t-shirt.svg" alt="футболка" class="production-cards__img">
@@ -153,54 +161,55 @@
             <div class="clothes-container__cards">
                 <h5 class="clothes-cards__title production-card__title">Жилетки</h5>
                 <img src="./images/image-Photoroom (25).svg" alt="t-shirts" class="clothes-cards__img">
-                <button type="button"  class="clothes-cards__link production-button"> Смотреть <img
-                        src="./images/Vector (Stroke).svg" alt="" class="link-img "> </button>
+                <a href="./" class="clothes-cards__link production-button"> Смотреть <img
+                        src="./images/Vector (Stroke).svg" alt="" class="link-img "> </a>
             </div>
         </section>
         <section class="portfolio">
             <h4 class="production-title portfolio-title">Наши работы</h4>
             <button type="button" class="clothes-button portfolio-button">Смотреть все</button>
-            <div class="carousel">
-                <div class="carousel-container">
+            <div class="carousel swiper">
+
+                <div class="carousel-container swiper-wrapper">
                     <!-- 3 карточки для карусели -->
-                    <div class="carousel-item">
+                    <div class="carousel-item swiper-slide">
                         <p class="carousel-title">Вышивка</p>
                         <img class="carousel-img" src="./images/6fb36237edde44e14d28b4ea6005769a.png" alt="">
                         <div class="carousel-content">
                             <button class="carousel-button">Подробнее о кейсе</button>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item swiper-slide">
                         <p class="carousel-title">Вышивка</p>
                         <img class="carousel-img" src="./images/4db2cc4915a329cac666fa000dcd27e3.png" alt="">
                         <div class="carousel-content">
                             <button class="carousel-button">Подробнее о кейсе</button>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item swiper-slide">
                         <p class="carousel-title">Вышивка</p>
-                        <img class="carousel-img" src="./images/uf.png" alt="">
+                        <img class="carousel-img " src="./images/uf.png" alt="">
                         <div class="carousel-content">
                             <button class="carousel-button">Подробнее о кейсе</button>
                         </div>
                     </div>
-        
+
                     <!-- Дублируем карточки для бесконечной прокрутки -->
-                    <div class="carousel-item">
+                    <div class="carousel-item swiper-slide">
                         <p class="carousel-title">Вышивка</p>
                         <img class="carousel-img" src="./images/6fb36237edde44e14d28b4ea6005769a.png" alt="">
                         <div class="carousel-content">
                             <button class="carousel-button">Подробнее о кейсе</button>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item swiper-slide">
                         <p class="carousel-title">Вышивка</p>
                         <img class="carousel-img" src="./images/4db2cc4915a329cac666fa000dcd27e3.png" alt="">
                         <div class="carousel-content">
                             <button class="carousel-button">Подробнее о кейсе</button>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item swiper-slide">
                         <p class="carousel-title">Вышивка</p>
                         <img class="carousel-img" src="./images/uf.png" alt="">
                         <div class="carousel-content">
@@ -208,15 +217,42 @@
                         </div>
                     </div>
                 </div>
+                </ls=>
+        </section>
+        <section class="form">
+            <img class="form-image" src="./images/formImg.svg" alt="свитшот">
+            <div class="form-container__text">
+                <h4 class="form-title">Хотите нанести принт на одежду или аксессуары?</h4>
+                <p class="form-text">Упростите себе задачу и сэкономьте время. Заполните форму и получите звонок
+                    с консультацией в ближайшее время, чтобы получить максимально быстрый расчёт</p>
+            </div>
+            <div class="form-container__inputs">
+                <label for="label-input">
+                    <input class="form-input form-input__name" type="text" name="name" id="name" placeholder="Ваше имя">
+                    <span class="error-message" id="name-error"></span>
+                </label>
+                <label for="label-input">
+                    <input class="form-input form-input__tel" type="tel" name="tel" id="tel"
+                        placeholder="Номер телефона">
+                    <span class="error-message" id="tel-error"></span>
+                </label>
+            </div>
+            <div class="form-container__button">
+                <button type="submit" class="form-button">Отправить</button>
+                <p class="form-subtitle">Нажимая кнопку «Отправить» вы соглашаетесь с <span class="form-span"> политикой
+                        конфиденциальности</span></p>
             </div>
         </section>
-        
-        
-        <footer class="footer">
 
+        <footer class="footer">
         </footer>
     </main>
+    <script type="module">
+        import swiper from 'https://cdn.jsdelivr.net/npm/swiper@11.2.0/+esm'
+    </script>
     <script src="./index.js"></script>
+
+
 </body>
 
 </html>
