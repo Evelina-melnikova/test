@@ -25,17 +25,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // Добавляем события mouseenter и mouseleave для текущего элемента
     element.addEventListener('mouseenter', () => {
       swiperInstance.autoplay.stop(); // Остановка проигрывания
-      console.log(`Autoplay paused for swiper ${index}`);
     });
 
     element.addEventListener('mouseleave', () => {
       swiperInstance.autoplay.start(); // Возобновление проигрывания
-      console.log(`Autoplay resumed for swiper ${index}`);
     });
 
     // Добавляем событие для возобновления autoplay после окончания слайда
     swiperInstance.on('slideChangeTransitionEnd', () => {
-      console.log(`Swipe ended for swiper ${index}`);
     });
   });
 });
