@@ -1,32 +1,49 @@
-const swiper = new Swiper('.swiper', {
-    direction: 'horizontal',
-    loop: true, 
-    slidesPerView: 'auto',
-    centeredSlides: true, 
-    spaceBetween: 0, 
-    autoplay: {
-      delay: 1500, 
-      disableOnInteraction: true, 
-    },
-    // slideToClickedSlide: true, // Прокрутка к карточке при клике на неё
+document.addEventListener('DOMContentLoaded', () => {
+  // Находим все элементы с классом 'swiper'
+  const swiperElements = document.querySelectorAll('.swiper');
+  
+  // Создаем массив для хранения всех экземпляров Swiper
+  const swipers = [];
+  
+  swiperElements.forEach((element, index) => {
+    // Инициализируем Swiper для каждого элемента
+    const swiperInstance = new Swiper(element, {
+      direction: 'horizontal',
+      loop: true,
+      slidesPerView: 'auto',
+      centeredSlides: true,
+      spaceBetween: 0,
+      autoplay: {
+        delay: 1500,
+        disableOnInteraction: false, // Важно для корректной работы после паузы
+      },
+    });
+    
+    // Добавляем экземпляр Swiper в массив
+    swipers.push(swiperInstance);
+
+    // Добавляем события mouseenter и mouseleave для текущего элемента
+    element.addEventListener('mouseenter', () => {
+      swiperInstance.autoplay.stop(); // Остановка проигрывания
+      console.log(`Autoplay paused for swiper ${index}`);
+    });
+
+    element.addEventListener('mouseleave', () => {
+      swiperInstance.autoplay.start(); // Возобновление проигрывания
+      console.log(`Autoplay resumed for swiper ${index}`);
+    });
+
+    // Добавляем событие для возобновления autoplay после окончания слайда
+    swiperInstance.on('slideChangeTransitionEnd', () => {
+      console.log(`Swipe ended for swiper ${index}`);
+    });
+  });
 });
 
-const swiperElement = document.querySelector('.swiper');
-
-swiperElement.addEventListener('mouseenter', () => {
-  swiper.autoplay.stop();
-  console.log('Autoplay paused');
-});
-
-swiperElement.addEventListener('mouseleave', () => {
-  swiper.autoplay.start();
-  console.log('Autoplay resumed');
-});
-
-swiper.on('touchEnd', () => {
-  console.log('Swipe ended, autoplay resumed');
-  swiper.autoplay.start();
-});
+// swiper.on('touchEnd', () => {
+//   console.log('Swipe ended, autoplay resumed');
+//   swiper.autoplay.start();
+// });
 
 const nameInput = document.getElementById('name');
 const telInput = document.getElementById('tel');

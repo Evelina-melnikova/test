@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  
     <link rel="stylesheet" href="./vendor/winston-cufonfonts-webfont/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
 
     <title>Test</title>
 </head>
@@ -245,6 +247,10 @@
         <section class="portfolio">
             <h4 class="production-title portfolio-title">Наши работы</h4>
             <button type="button" class="clothes-button portfolio-button">Смотреть все</button>
+            <div class="portfolio-wrapper__tablet">
+                <h4 class="production-title portfolio-title portfolio-title__tablet">Наши работы</h4>
+            <button type="button" class=" portfolio-button  portfolio-button__tablet">Смотреть все</button>
+            </div>
             <div class="carousel swiper">
 
                 <div class="carousel-container swiper-wrapper">
@@ -296,60 +302,7 @@
                 </div>
                 </ls=>
         </section>
-        <section class="portfolio portfolio-tablet">
-            <h4 class="production-title portfolio-title">Наши работы</h4>
-            <button type="button" class="clothes-button portfolio-button">Смотреть все</button>
-            <div class="carousel swiper">
-
-                <div class="carousel-container swiper-wrapper">
-                    <!-- 3 карточки для карусели -->
-                    <div class="carousel-item swiper-slide">
-                        <p class="carousel-title">Вышивка</p>
-                        <img class="carousel-img" src="./images/6fb36237edde44e14d28b4ea6005769a.png" alt="">
-                        <div class="carousel-content">
-                            <button class="carousel-button">Подробнее о кейсе</button>
-                        </div>
-                    </div>
-                    <div class="carousel-item swiper-slide">
-                        <p class="carousel-title">Вышивка</p>
-                        <img class="carousel-img" src="./images/4db2cc4915a329cac666fa000dcd27e3.png" alt="">
-                        <div class="carousel-content">
-                            <button class="carousel-button">Подробнее о кейсе</button>
-                        </div>
-                    </div>
-                    <div class="carousel-item swiper-slide">
-                        <p class="carousel-title">Вышивка</p>
-                        <img class="carousel-img " src="./images/uf.png" alt="">
-                        <div class="carousel-content">
-                            <button class="carousel-button">Подробнее о кейсе</button>
-                        </div>
-                    </div>
-
-                    <!-- Дублируем карточки для бесконечной прокрутки -->
-                    <div class="carousel-item swiper-slide">
-                        <p class="carousel-title">Вышивка</p>
-                        <img class="carousel-img" src="./images/6fb36237edde44e14d28b4ea6005769a.png" alt="">
-                        <div class="carousel-content">
-                            <button class="carousel-button">Подробнее о кейсе</button>
-                        </div>
-                    </div>
-                    <div class="carousel-item swiper-slide">
-                        <p class="carousel-title">Вышивка</p>
-                        <img class="carousel-img" src="./images/4db2cc4915a329cac666fa000dcd27e3.png" alt="">
-                        <div class="carousel-content">
-                            <button class="carousel-button">Подробнее о кейсе</button>
-                        </div>
-                    </div>
-                    <div class="carousel-item swiper-slide">
-                        <p class="carousel-title">Вышивка</p>
-                        <img class="carousel-img" src="./images/uf.png" alt="">
-                        <div class="carousel-content">
-                            <button class="carousel-button">Подробнее о кейсе</button>
-                        </div>
-                    </div>
-                </div>
-                </ls=>
-        </section>
+            
         <section class="form">
             <img class="form-image" src="./images/formImg.svg" alt="свитшот">
             <div class="form-container__text">
