@@ -1,46 +1,39 @@
-document.addEventListener('DOMContentLoaded', () => {
-  // Находим все элементы с классом 'swiper'
-  const swiperElements = document.querySelectorAll('.swiper');
-  
-  // Создаем массив для хранения всех экземпляров Swiper
-  const swipers = [];
-  
-  swiperElements.forEach((element, index) => {
-    // Инициализируем Swiper для каждого элемента
-    const swiperInstance = new Swiper(element, {
-      direction: 'horizontal',
-      loop: true,
-      slidesPerView: 'auto',
-      centeredSlides: true,
-      spaceBetween: 0,
-      autoplay: {
-        delay: 1500,
-        disableOnInteraction: false, // Важно для корректной работы после паузы
-      },
-    });
-    
-    // Добавляем экземпляр Swiper в массив
-    swipers.push(swiperInstance);
-
-    // Добавляем события mouseenter и mouseleave для текущего элемента
-    element.addEventListener('mouseenter', () => {
-      swiperInstance.autoplay.stop(); // Остановка проигрывания
-    });
-
-    element.addEventListener('mouseleave', () => {
-      swiperInstance.autoplay.start(); // Возобновление проигрывания
-    });
-
-    // Добавляем событие для возобновления autoplay после окончания слайда
-    swiperInstance.on('slideChangeTransitionEnd', () => {
-    });
-  });
+const swiper = new Swiper('.swiper', {
+  direction: 'horizontal',
+  loop: true, 
+  slidesPerView: 'auto',
+  centeredSlides: true, 
+  spaceBetween: 0, 
+  autoplay: {
+    delay: 1500, 
+    disableOnInteraction: true, 
+  },
+  // slideToClickedSlide: true, // Прокрутка к карточке при клике на неё
 });
 
-// swiper.on('touchEnd', () => {
-//   console.log('Swipe ended, autoplay resumed');
-//   swiper.autoplay.start();
-// });
+const swiperElement = document.querySelector('.swiper');
+
+// Остановка autoplay при наведении на карусель
+swiperElement.addEventListener('mouseenter', () => {
+swiper.autoplay.stop();
+});
+
+// Возобновление autoplay при уходе курсора
+swiperElement.addEventListener('mouseleave', () => {
+swiper.autoplay.start();
+});
+
+// Добавление остановки autoplay при клике на любую карточку
+document.querySelectorAll('.swiper-slide').forEach((slide) => {
+slide.addEventListener('click', () => {
+  swiper.autoplay.stop();
+});
+});
+
+// Событие для возобновления autoplay после свайпа
+swiper.on('touchEnd', () => {
+swiper.autoplay.start();
+});
 
 const nameInput = document.getElementById('name');
 const telInput = document.getElementById('tel');
@@ -48,56 +41,56 @@ const nameError = document.getElementById('name-error');
 const telError = document.getElementById('tel-error');
 
 function validateName() {
-  const nameValue = nameInput.value.trim();
+const nameValue = nameInput.value.trim();
 
-  const cleanedName = nameValue.replace(/[0-9]/g, '');
+const cleanedName = nameValue.replace(/[0-9]/g, '');
 
-  const formattedName = cleanedName.charAt(0).toUpperCase() + cleanedName.slice(1);
+const formattedName = cleanedName.charAt(0).toUpperCase() + cleanedName.slice(1);
 
-  nameInput.value = formattedName;
+nameInput.value = formattedName;
 
-  if (formattedName === '') {
-    nameInput.classList.add('error');
-    nameError.textContent = 'Имя должно содержать только буквы и начинаться с заглавной буквы';
-    nameError.classList.add('visible');
-  } else {
-    nameInput.classList.remove('error');
-    nameError.textContent = '';
-    nameError.classList.remove('visible');
-  }
+if (formattedName === '') {
+  nameInput.classList.add('error');
+  nameError.textContent = 'Имя должно содержать только буквы и начинаться с заглавной буквы';
+  nameError.classList.add('visible');
+} else {
+  nameInput.classList.remove('error');
+  nameError.textContent = '';
+  nameError.classList.remove('visible');
+}
 }
 
 function validateTel() {
-  const telValue = telInput.value.trim();
-  const cleanedTel = telValue.replace(/[^0-9\s()+-]/g, '');
+const telValue = telInput.value.trim();
+const cleanedTel = telValue.replace(/[^0-9\s()+-]/g, '');
 
-  telInput.value = cleanedTel;
+telInput.value = cleanedTel;
 
-  const telRegex = /^[+]?[0-9\s()-]{10,15}$/;
-  if (!telRegex.test(cleanedTel)) {
-    telInput.classList.add('error');
-    telError.textContent = 'Введите корректный номер телефона';
-    telError.classList.add('visible');
-  } else {
-    telInput.classList.remove('error');
-    telError.textContent = '';
-    telError.classList.remove('visible');
-  }
+const telRegex = /^[+]?[0-9\s()-]{10,15}$/;
+if (!telRegex.test(cleanedTel)) {
+  telInput.classList.add('error');
+  telError.textContent = 'Введите корректный номер телефона';
+  telError.classList.add('visible');
+} else {
+  telInput.classList.remove('error');
+  telError.textContent = '';
+  telError.classList.remove('visible');
+}
 }
 
 document.querySelectorAll('.questions-container__item').forEach((item) => {
-  const button = item.querySelector('.questions-item__button');
-  button.addEventListener('click', () => {
-      // Убираем класс "open" у всех остальных элементов
-      document.querySelectorAll('.questions-container__item').forEach((otherItem) => {
-          if (otherItem !== item) {
-              otherItem.classList.remove('open');
-          }
-      });
-      
-      // Переключаем текущий элемент
-      item.classList.toggle('open');
-  });
+const button = item.querySelector('.questions-item__button');
+button.addEventListener('click', () => {
+    // Убираем класс "open" у всех остальных элементов
+    document.querySelectorAll('.questions-container__item').forEach((otherItem) => {
+        if (otherItem !== item) {
+            otherItem.classList.remove('open');
+        }
+    });
+    
+    // Переключаем текущий элемент
+    item.classList.toggle('open');
+});
 });
 
 nameInput.addEventListener('input', validateName); 
