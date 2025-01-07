@@ -5,7 +5,7 @@ const swiper = new Swiper('.swiper', {
   centeredSlides: true, 
   spaceBetween: 0, 
   autoplay: {
-    delay: 1500, 
+    delay: 2000, 
     disableOnInteraction: true, 
   },
   // slideToClickedSlide: true, // Прокрутка к карточке при клике на неё
