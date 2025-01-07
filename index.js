@@ -71,5 +71,20 @@ function validateTel() {
   }
 }
 
+document.querySelectorAll('.questions-container__item').forEach((item) => {
+  const button = item.querySelector('.questions-item__button');
+  button.addEventListener('click', () => {
+      // Убираем класс "open" у всех остальных элементов
+      document.querySelectorAll('.questions-container__item').forEach((otherItem) => {
+          if (otherItem !== item) {
+              otherItem.classList.remove('open');
+          }
+      });
+      
+      // Переключаем текущий элемент
+      item.classList.toggle('open');
+  });
+});
+
 nameInput.addEventListener('input', validateName); 
 telInput.addEventListener('input', validateTel);  
