@@ -23,10 +23,10 @@
         <div class="header-wrapper header-wrapper__icon">
             <button type="button" class="header-icon__wrapper_button number"></button>
             <button type="button" class="header-icon__wrapper_button basket"></button>
-            <button type="button" class="header-button__menu" data-popup="popup3"></button>
+            <button type="button" class="header-nav__item header-button__menu" data-popup="popup3"></button>
         </div>
     </header>
-    <header class="header-laptop" id="header-laptop">
+    <header class="header-laptop" id="header-desktop">
         <div class="header-laptop__wrapper">
             <div class="header-wrapper header-wrapper__logo">
                 <img src="./images/Summertime Sadness.svg" alt="logo header" class="header-logo">
@@ -58,7 +58,7 @@
         <img src="./images/hdrLaptopLine.svg" alt="" class="header-laptop__line">
     </header>
     <main class="content">
-        <section class="services" id="services">
+        <section class="services" id="services-mobile">
             <div class="services-container services-container__text">
                 <p class="services-text">Онлайн оформление</p>
                 <p class="services-text">Доставка по РФ</p>
@@ -121,7 +121,7 @@
                 </div>
             </div>
         </section>
-        <section class="services services-laptop" id="services-laptop">
+        <section class="services services-laptop" id="services-desktop">
             <div class="services-laptop__wrapper">
                 <div class="services-container services-container__text">
                     <p class="services-text">Онлайн оформление</p>
@@ -214,7 +214,7 @@
 
         </div>
 
-        <section class="production" id="production">
+        <section class="production" id="production-mobile">
             <h3 class="production-title">Мы наносим</h3>
             <div class="production-cards card-one">
                 <div class="production-cards-text">
@@ -264,11 +264,11 @@
                 <img src="./images/woman.png" alt="футболка" class="production-cards__img img-woman">
             </div>
         </section>
-        <section class="production production-tablet" id="production-tablet">
+        <section class="production production-tablet" id="production-desktop">
             <h3 class="production-title">Мы наносим</h3>
             <div class="production-wrapper__tablet">
                 <div class="production-cards card-one">
-                    <div class="production-cards-text"  id="production-termo">
+                    <div class="production-cards-text production-cards-text-one"  id="production-termo">
                         <h4 class="production-card__title">Термопечать</h4>
                         <p class="production-subtitle">Процесс нанесения изображения на ткань с помощью нагревания
                             специальной термобумаги</p>
@@ -276,7 +276,7 @@
                                 alt="стрелочка" class="link-img"></a>
                     </div>
                     <img src="./images/t-shirt.svg" alt="футболка" class="production-cards__img t-shirts__img">
-                    <img src="./images/Вектор.svg" alt="векторное изображение"
+                    <img src="./images/Vector 621.svg" alt="векторное изображение"
                         class="vector-overlay vector-overlay__one">
                 </div>
                 <div class="production-cards">
@@ -317,7 +317,7 @@
                 </div>
             </div>
         </section>
-        <section class="clothes" id="clothes">
+        <section class="clothes" id="clothes-mobile">
             <h4 class="clothes-title production-title ">Одежда</h4>
             <button type="button" class="clothes-button">Смотреть все</button>
             <div class="clothes-container__cards">
@@ -339,7 +339,7 @@
                         src="./images/Vector (Stroke).svg" alt="" class="link-img "> </a>
             </div>
         </section>
-        <section class="clothes clothes-tablet" id="clothes-tablet">
+        <section class="clothes clothes-tablet" id="clothes-desktop">
             <div class="clothes-wrapper__tablet">
                 <h4 class="clothes-title">Одежда</h4>
                 <button type="button" class="clothes-button">Смотреть все</button>
@@ -585,27 +585,29 @@
 
         <div id="popup1" class="popup">
             <div class="popup-content popup-content__logo">
-               <a href="#production-tablet" class="popup-link">Термопечать</a>
-               <a href="#production-tablet" class="popup-link">DTF-печать</a>
-               <a href="#production-tablet" class="popup-link">УФ-печать</a>
-               <a href="#production-tablet" class="popup-link">Вышивка</a>
+               <a href="#production-desktop" class="popup-link">Термопечать</a>
+               <a href="#production-desktop" class="popup-link">DTF-печать</a>
+               <a href="#production-desktop" class="popup-link">УФ-печать</a>
+               <a href="#production-desktop" class="popup-link">Вышивка</a>
             </div>
         </div>
     
         <div id="popup2" class="popup">
             <div class="popup-content popup-content__clothes">
-                <a href="#clothes-tablet" class="popup-link">Термопечать</a>
-                <a href="#clothes-tablet" class="popup-link">DTF-печать</a>
-                <a href="#clothes-tablet" class="popup-link">УФ-печать</a>
-                <a href="#clothes-tablet" class="popup-link">Вышивка</a>
+                <a href="#clothes-desktop" class="popup-link">Термопечать</a>
+                <a href="#clothes-desktop" class="popup-link">DTF-печать</a>
+                <a href="#clothes-desktop" class="popup-link">УФ-печать</a>
+                <a href="#clothes-desktop" class="popup-link">Вышивка</a>
             </div>
         </div>
     
         <div id="popup3" class="popup">
             <div class="popup-content popup-content__more">
-                <h2>Ещё</h2>
-                <p>Дополнительное описание.</p>
-                <button class="popup-close">Закрыть</button>
+                <a href="#production" class="popup-link__menu">Нанесение логотипов</a>
+                <a href="#clothes" class="popup-link__menu">Одежда</a>
+                <a href="#portfolio" class="popup-link__menu">Наши работы</a>
+                <a href="#questions" class="popup-link__menu">Вопросы</a>
+
             </div>
         </div>
     </main>
