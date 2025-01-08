@@ -15,7 +15,7 @@
 </head>
 
 <body class="page">
-    <header class="header">
+    <header class="header" id="header">
         <div class="header-wrapper header-wrapper__logo">
             <img src="./images/Summertime Sadness.svg" alt="logo header" class="header-logo">
             <h1 class="header-title">logotipshik</h1>
@@ -23,15 +23,106 @@
         <div class="header-wrapper header-wrapper__icon">
             <button type="button" class="header-icon__wrapper_button number"></button>
             <button type="button" class="header-icon__wrapper_button basket"></button>
-            <button type="button" class="header-button__menu"></button>
-
+            <button type="button" class="header-button__menu" data-popup="popup3"></button>
         </div>
-
+    </header>
+    <header class="header-laptop" id="header-laptop">
+        <div class="header-laptop__wrapper">
+            <div class="header-wrapper header-wrapper__logo">
+                <img src="./images/Summertime Sadness.svg" alt="logo header" class="header-logo">
+                <h1 class="header-title">logotipshik</h1>
+            </div>
+            <nav class="header-nav">
+                <button class="header-nav__item" data-popup="popup1">Нанесение логотипов <img src="./images/chevron-down.svg"
+                        alt="стрелочка" class="header-laptop__img"> </button>
+                <button  class="header-nav__item" data-popup="popup2">Одежда <img src="./images/chevron-down.svg" alt="стрелочка"
+                        class="header-laptop__img"></button>
+                <a href="#portfolio" class="header-nav__item">Наши работы</a>
+                <a href="#" class="header-nav__item">Контакты</a>
+                <button class="header-nav__item item-more" data-popup="popup3">Ещё <img src="./images/headerMore.svg" alt="стрелочка"
+                        class="header-laptop__img more"></button>
+            </nav>
+            <div class="header-wrapper header-wrapper__icon">
+                <div class="header-wrapper header-wrapper__social">
+                    <button type="button" class="header-wrapper__social_icon tg"> <img src="./images/tg.svg"
+                            alt="Telegram" class="social-img tg"></button>
+                    <button type="button" class="header-wrapper__social_icon wa"> <img src="./images/whatsApp.svg"
+                            alt="whatsApp" class="social-img wa"></button>
+                    <button type="button" class="header-wrapper__social_icon vk"> <img src="./images/vk.svg" alt="Vk"
+                            class="social-img vk"></button>
+                </div>
+                <button type="button" class="header-icon__wrapper_button number"></button>
+                <button type="button" class="header-icon__wrapper_button basket"></button>
+            </div>
+        </div>
+        <img src="./images/hdrLaptopLine.svg" alt="" class="header-laptop__line">
     </header>
     <main class="content">
-        <div class="noise-background">
+        <section class="services" id="services">
+            <div class="services-container services-container__text">
+                <p class="services-text">Онлайн оформление</p>
+                <p class="services-text">Доставка по РФ</p>
+                <p class="services-text">От 1 шт.</p>
+            </div>
+            <h2 class="services-title">Наносим логотипы компаний на одежду и аксессуары</h2>
+            <div class="services-container services-container__buttons">
+                <button type="button" class="services-button services-button__text">
+                    Наши услуги
+                </button>
+                <button type="button" class="services-button services-button__play">
+                    <img src="./images/Frame 19 (1).svg" alt="play" class="button-img">
+                </button>
+            </div>
+            <p class="services-subtitle">Разработаем принт и нанесём на любую одежду или иную атрибутику вашего
+                бренда
+                от 1 шт. и 3-х дней в Санкт-Петербурге</p>
+            <div class="about-container__numbers">
+                <a href="./" class="about-link">
+                    <p class="about-number about-one">01</p>
+                </a>
+                <a href="./" class="about-link">
+                    <p class="about-number">02</p>
+                </a>
+                <a href="./" class="about-link">
+                    <p class="about-number">03</p>
+                </a>
+                <a href="./" class="about-link">
+                    <p class="about-number">04</p>
+                </a>
+            </div>
 
-            <section class="services">
+            <div class="about-container__line">
+                <hr class="number-line grin">
+                <hr class="number-line white">
+                <hr class="number-line gradient">
+            </div>
+            <div class="about-container__photo">
+                <img src="./images/man.svg" alt="" class="about-photo">
+                <img src="./images/Summertime.svg" alt="" class="about-photo__icon icon violet-icon">
+                <img src="./images/Summertime green.svg" alt="" class="about-photo__icon green-icon">
+            </div>
+            <div class="about-wrapper__cards">
+                <div class="about-container__cards">
+                    <h3 class="about-container__cards-title">Напечатали принтов и логотипов за всё время работы
+                    </h3>
+                    <div class="card-wrapper">
+                        <img src="./images/Summertime cards.svg" alt="" class="card-wrapper__img">
+                        <p class="card-wrapper__text">296 390+</p>
+                    </div>
+                </div>
+                <div class="about-container__cards cards-two">
+                    <h3 class="about-container__cards-title">Производственная мощность предприятия
+                        в Санкт-Петербурге
+                    </h3>
+                    <div class="card-wrapper">
+                        <img src="./images/Summertime cards.svg" alt="" class="card-wrapper__img">
+                        <p class="card-wrapper__text">1 000+</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="services services-laptop" id="services-laptop">
+            <div class="services-laptop__wrapper">
                 <div class="services-container services-container__text">
                     <p class="services-text">Онлайн оформление</p>
                     <p class="services-text">Доставка по РФ</p>
@@ -42,15 +133,17 @@
                     <button type="button" class="services-button services-button__text">
                         Наши услуги
                     </button>
-                    <button type="button" class="services-button services-button__play">
-                        <img src="./images/Frame 19 (1).svg" alt="play" class="button-img">
-                    </button>
+                    <div class="laptop-wrapper__button">
+                        <button type="button" class="services-button services-button__play">
+                            <img src="./images/Frame 19 (1).svg" alt="play" class="button-img">
+                        </button>
+                        <p class="services-laptop__text">Посмотрите видео о нашей компании</p>
+                    </div>
+
                 </div>
                 <p class="services-subtitle">Разработаем принт и нанесём на любую одежду или иную атрибутику вашего
                     бренда
                     от 1 шт. и 3-х дней в Санкт-Петербурге</p>
-            </section>
-            <section class="about">
                 <div class="about-container__numbers">
                     <a href="./" class="about-link">
                         <p class="about-number about-one">01</p>
@@ -65,6 +158,9 @@
                         <p class="about-number">04</p>
                     </a>
                 </div>
+
+            </div>
+            <div class="about-container__laptop">
                 <div class="about-container__line">
                     <hr class="number-line grin">
                     <hr class="number-line white">
@@ -75,15 +171,35 @@
                     <img src="./images/Summertime.svg" alt="" class="about-photo__icon icon violet-icon">
                     <img src="./images/Summertime green.svg" alt="" class="about-photo__icon green-icon">
                 </div>
+                <!-- <div class="about-wrapper__cards">
+                        <div class="about-container__cards">
+                            <h3 class="about-container__cards-title">Напечатали принтов и логотипов за всё время работы
+                            </h3>
+                            <div class="card-wrapper">
+                                <img src="./images/Summertime cards.svg" alt="" class="card-wrapper__img">
+                                <p class="card-wrapper__text">296 390+</p>
+                            </div>
+                        </div>
+                        <div class="about-container__cards cards-two">
+                            <h3 class="about-container__cards-title">Производственная мощность предприятия
+                                в Санкт-Петербурге
+                            </h3>
+                            <div class="card-wrapper">
+                                <img src="./images/Summertime cards.svg" alt="" class="card-wrapper__img">
+                                <p class="card-wrapper__text">1 000+</p>
+                            </div>
+                        </div>
+                    </div> -->
                 <div class="about-wrapper__cards">
                     <div class="about-container__cards">
-                        <h3 class="about-container__cards-title">Напечатали принтов и логотипов за всё время работы</h3>
+                        <h3 class="about-container__cards-title">Напечатали принтов и логотипов за всё время работы
+                        </h3>
                         <div class="card-wrapper">
                             <img src="./images/Summertime cards.svg" alt="" class="card-wrapper__img">
                             <p class="card-wrapper__text">296 390+</p>
                         </div>
                     </div>
-                    <div class="about-container__cards cards-two">
+                    <div class="about-container__cards">
                         <h3 class="about-container__cards-title">Производственная мощность предприятия
                             в Санкт-Петербурге
                         </h3>
@@ -93,9 +209,12 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
+
         </div>
-        <section class="production">
+
+        <section class="production" id="production">
             <h3 class="production-title">Мы наносим</h3>
             <div class="production-cards card-one">
                 <div class="production-cards-text">
@@ -145,19 +264,20 @@
                 <img src="./images/woman.png" alt="футболка" class="production-cards__img img-woman">
             </div>
         </section>
-        <section class="production production-tablet">
+        <section class="production production-tablet" id="production-tablet">
             <h3 class="production-title">Мы наносим</h3>
             <div class="production-wrapper__tablet">
                 <div class="production-cards card-one">
-                    <div class="production-cards-text">
+                    <div class="production-cards-text"  id="production-termo">
                         <h4 class="production-card__title">Термопечать</h4>
                         <p class="production-subtitle">Процесс нанесения изображения на ткань с помощью нагревания
                             специальной термобумаги</p>
                         <a href="./" class="production-button"> Подробнее <img src="./images/Vector (Stroke).svg"
                                 alt="стрелочка" class="link-img"></a>
                     </div>
-                    <img src="./images/t-shirt.svg" alt="футболка" class="production-cards__img">
-                    <img src="./images/Вектор.svg" alt="векторное изображение" class="vector-overlay">
+                    <img src="./images/t-shirt.svg" alt="футболка" class="production-cards__img t-shirts__img">
+                    <img src="./images/Вектор.svg" alt="векторное изображение"
+                        class="vector-overlay vector-overlay__one">
                 </div>
                 <div class="production-cards">
                     <div class="production-cards-text">
@@ -197,7 +317,7 @@
                 </div>
             </div>
         </section>
-        <section class="clothes">
+        <section class="clothes" id="clothes">
             <h4 class="clothes-title production-title ">Одежда</h4>
             <button type="button" class="clothes-button">Смотреть все</button>
             <div class="clothes-container__cards">
@@ -219,7 +339,7 @@
                         src="./images/Vector (Stroke).svg" alt="" class="link-img "> </a>
             </div>
         </section>
-        <section class="clothes clothes-tablet">
+        <section class="clothes clothes-tablet" id="clothes-tablet">
             <div class="clothes-wrapper__tablet">
                 <h4 class="clothes-title">Одежда</h4>
                 <button type="button" class="clothes-button">Смотреть все</button>
@@ -244,16 +364,16 @@
                             src="./images/Vector (Stroke).svg" alt="" class="link-img "> </a>
                 </div>
         </section>
-        <section class="portfolio">
-            <h4 class="production-title portfolio-title">Наши работы</h4>
-            <button type="button" class="clothes-button portfolio-button">Смотреть все</button>
+        <section class="portfolio" id="portfolio">
+            <!-- <h4 class="portfolio-title">Наши работы</h4>
+            <button type="button" class="clothes-button portfolio-button">Смотреть все</button> -->
             <div class="portfolio-wrapper__tablet">
-                <h4 class="production-title portfolio-title portfolio-title__tablet">Наши работы</h4>
-                <button type="button" class=" portfolio-button  portfolio-button__tablet">Смотреть все</button>
+                <h4 class=" portfolio-title__tablet">Наши работы</h4>
+                <button type="button" class="  portfolio-button__tablet">Смотреть все</button>
             </div>
-            <div class="carousel swiper">
+            <div class="carousel swiper swiper-container">
 
-                <div class="carousel-container swiper-wrapper">
+                <div class="carousel-container swiper-wrapper swiper-container" virtual="true">
                     <!-- 3 карточки для карусели -->
                     <div class="carousel-item swiper-slide">
                         <p class="carousel-title">Вышивка</p>
@@ -299,35 +419,60 @@
                             <button class="carousel-button">Подробнее о кейсе</button>
                         </div>
                     </div>
+                    <!-- Дублируем карточки для бесконечной прокрутки -->
+                    <div class="carousel-item swiper-slide">
+                        <p class="carousel-title">Вышивка</p>
+                        <img class="carousel-img" src="./images/6fb36237edde44e14d28b4ea6005769a.png" alt="">
+                        <div class="carousel-content">
+                            <button class="carousel-button">Подробнее о кейсе</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item swiper-slide">
+                        <p class="carousel-title">Вышивка</p>
+                        <img class="carousel-img" src="./images/4db2cc4915a329cac666fa000dcd27e3.png" alt="">
+                        <div class="carousel-content">
+                            <button class="carousel-button">Подробнее о кейсе</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item swiper-slide">
+                        <p class="carousel-title">Вышивка</p>
+                        <img class="carousel-img" src="./images/uf.png" alt="">
+                        <div class="carousel-content">
+                            <button class="carousel-button">Подробнее о кейсе</button>
+                        </div>
+                    </div>
                 </div>
-                </ls=>
         </section>
 
-        <section class="form">
+        <section class="form" id="form">
             <img class="form-image" src="./images/formImg.svg" alt="свитшот">
-            <div class="form-container form-container__text">
-                <h4 class="form-title">Хотите нанести принт на одежду или аксессуары?</h4>
-                <p class="form-text">Упростите себе задачу и сэкономьте время. Заполните форму и получите звонок
-                    с консультацией в ближайшее время, чтобы получить максимально быстрый расчёт</p>
-            </div>
-            <div class="form-container form-container__inputs">
-                <label for="name" class="name-label">
-                    <input class="form-input form-input__name" type="text" name="name" id="name" placeholder="Ваше имя">
-                    <span class="error-message" id="name-error"></span>
-                </label>
-                <label for="tel" class="tel-label">
-                    <input class="form-input form-input__tel" type="tel" name="tel" id="tel"
-                        placeholder="Номер телефона">
-                    <span class="error-message" id="tel-error"></span>
-                </label>
-            </div>
-            <div class="form-container form-container__button">
-                <button type="submit" class="form-button">Отправить</button>
-                <p class="form-subtitle">Нажимая кнопку «Отправить» вы соглашаетесь с <span class="form-span"> политикой
-                        конфиденциальности</span></p>
+            <div class="form-tablet">
+                <div class="form-container form-container__text">
+                    <h4 class="form-title">Хотите нанести принт на одежду или аксессуары?</h4>
+                    <p class="form-text">Упростите себе задачу и сэкономьте время. Заполните форму и получите звонок
+                        с консультацией в ближайшее время, чтобы получить максимально быстрый расчёт</p>
+                </div>
+                <div class="form-container form-container__inputs">
+                    <label for="name" class="name-label">
+                        <input class="form-input form-input__name" type="text" name="name" id="name"
+                            placeholder="Ваше имя">
+                        <span class="error-message" id="name-error"></span>
+                    </label>
+                    <label for="tel" class="tel-label">
+                        <input class="form-input form-input__tel" type="tel" name="tel" id="tel"
+                            placeholder="Номер телефона">
+                        <span class="error-message" id="tel-error"></span>
+                    </label>
+                </div>
+                <div class="form-container form-container__button">
+                    <button type="submit" class="form-button">Отправить</button>
+                    <p class="form-subtitle">Нажимая кнопку «Отправить» вы соглашаетесь с <span class="form-span">
+                            политикой
+                            конфиденциальности</span></p>
+                </div>
             </div>
         </section>
-        <section class="questions">
+        <section class="questions" id="questions">
             <div class="questions-container questions-container__title">
                 <h4 class="questions-title">Ответы на частые вопросы</h4>
                 <button class="questions-button" type="button">Смотреть все вопросы</button>
@@ -437,10 +582,35 @@
         </section>
         <footer class="footer">
         </footer>
+
+        <div id="popup1" class="popup">
+            <div class="popup-content popup-content__logo">
+               <a href="#production-tablet" class="popup-link">Термопечать</a>
+               <a href="#production-tablet" class="popup-link">DTF-печать</a>
+               <a href="#production-tablet" class="popup-link">УФ-печать</a>
+               <a href="#production-tablet" class="popup-link">Вышивка</a>
+            </div>
+        </div>
+    
+        <div id="popup2" class="popup">
+            <div class="popup-content popup-content__clothes">
+                <a href="#clothes-tablet" class="popup-link">Термопечать</a>
+                <a href="#clothes-tablet" class="popup-link">DTF-печать</a>
+                <a href="#clothes-tablet" class="popup-link">УФ-печать</a>
+                <a href="#clothes-tablet" class="popup-link">Вышивка</a>
+            </div>
+        </div>
+    
+        <div id="popup3" class="popup">
+            <div class="popup-content popup-content__more">
+                <h2>Ещё</h2>
+                <p>Дополнительное описание.</p>
+                <button class="popup-close">Закрыть</button>
+            </div>
+        </div>
     </main>
-    <script type="module">
-        import swiper from 'https://cdn.jsdelivr.net/npm/swiper@11.2.0/+esm'
-    </script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
     <script src="./index.js"></script>
 
 

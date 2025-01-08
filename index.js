@@ -1,3 +1,4 @@
+
 const swiper = new Swiper('.swiper', {
   direction: 'horizontal',
   loop: true, 
@@ -8,7 +9,8 @@ const swiper = new Swiper('.swiper', {
     delay: 2000, 
     disableOnInteraction: true, 
   },
-  // slideToClickedSlide: true, // Прокрутка к карточке при клике на неё
+  slideToClickedSlide: true, // Прокрутка к карточке при клике на неё
+  allowTouchMove: false, // Отключение сенсорной прокрутки
 });
 
 const swiperElement = document.querySelector('.swiper');
@@ -77,21 +79,63 @@ if (!telRegex.test(cleanedTel)) {
   telError.classList.remove('visible');
 }
 }
+function closeAllPopups() {
+  document.querySelectorAll('.popup').forEach((popup) => {
+    popup.style.display = 'none'; // Скрываем попап
+  });
+}
+// Функция открытия попапа
+function openPopup(popupId) {
+  closeAllPopups(); // Закрываем все открытые попапы
+  const popup = document.getElementById(popupId);
+  if (popup) {
+      popup.style.display = 'flex'; 
+      requestAnimationFrame(() => { 
+      });
+  }
+}
 
-document.querySelectorAll('.questions-container__item').forEach((item) => {
-const button = item.querySelector('.questions-item__button');
-button.addEventListener('click', () => {
-    // Убираем класс "open" у всех остальных элементов
-    document.querySelectorAll('.questions-container__item').forEach((otherItem) => {
-        if (otherItem !== item) {
-            otherItem.classList.remove('open');
-        }
-    });
-    
-    // Переключаем текущий элемент
-    item.classList.toggle('open');
-});
+// Функция открытия попапа
+function openPopup(popupId) {
+  closeAllPopups(); // Закрываем все открытые попапы
+  const popup = document.getElementById(popupId);
+  if (popup) {
+      popup.style.display = 'flex'; // Отображаем попап
+  }
+}
+
+// Функция закрытия попапа
+function closePopup(popup) {
+  popup.style.display = 'none'; // Скрываем попап
+}
+
+// Добавляем обработчики событий
+document.querySelectorAll('.header-nav__item').forEach((button) => {
+  button.addEventListener('click', () => {
+      const popupId = button.getAttribute('data-popup'); // Получаем ID попапа
+      openPopup(popupId);
+  });
 });
 
+document.querySelectorAll('.popup-close').forEach((closeButton) => {
+  closeButton.addEventListener('click', (e) => {
+      const popup = e.target.closest('.popup'); // Находим родительский попап
+      closePopup(popup);
+  });
+});
+
+// Закрытие попапа при клике вне его области
+document.querySelectorAll('.popup').forEach((popup) => {
+  popup.addEventListener('click', (e) => {
+      if (e.target === popup) {
+        closeAllPopups(); // Закрываем все попапы
+      }
+  });
+});
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+      closeAllPopups(); // Закрываем все попапы
+  }
+});
 nameInput.addEventListener('input', validateName); 
 telInput.addEventListener('input', validateTel);  
